@@ -1,0 +1,69 @@
+﻿@model IEnumerable<dqdK22CNT3Lesson07db.Models.dqdSinhVien>
+
+@{
+    ViewBag.Title = "dqdIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "qdqCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dqdHoSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dqdTenSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dqdNgaySinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dqdPhai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dqdPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dqdEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dqdMaKH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dqdHoSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dqdTenSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dqdNgaySinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dqdPhai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dqdPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dqdEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dqdMaKH)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "qdqEdit", new { id=item.dqdMaSV }) |
+            @Html.ActionLink("Details", "qdqDetails", new { id=item.dqdMaSV }) |
+            @Html.ActionLink("Delete", "qdqDelete", new { id=item.dqdMaSV })
+        </td>
+    </tr>
+}
+
+</table>

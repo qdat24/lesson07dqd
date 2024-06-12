@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dqdK22CNT3Lesson07DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="dqdSinhVien">
+    <Key>
+      <PropertyRef Name="dqdMaSV" />
+    </Key>
+    <Property Name="dqdMaSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dqdHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dqdTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dqdNgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="dqdPhai" Type="Boolean" />
+    <Property Name="dqdPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="dqdEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dqdMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="dqdK22CNT3Lesson07DbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="dqdSinhViens" EntityType="Self.dqdSinhVien" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+  </EntityContainer>
+</Schema>

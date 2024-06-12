@@ -1,0 +1,74 @@
+﻿@model dqdK22CNT3Lesson07db.Models.dqdSinhVien
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>dqdSinhVien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dqdHoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dqdHoSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dqdTenSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dqdTenSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dqdNgaySinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dqdNgaySinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dqdPhai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dqdPhai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dqdPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dqdPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dqdEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dqdEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dqdMaKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dqdMaKH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.dqdMaSV }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
